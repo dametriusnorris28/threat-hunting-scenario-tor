@@ -56,7 +56,7 @@ DeviceProcessEvents
 | where ProcessCommandLine contains "tor-browser-windows-x86_64-portable-14.0.7.exe"  
 | project Timestamp, DeviceName, AccountName, ActionType, FileName, FolderPath, SHA256, ProcessCommandLine
 ```
-<img width="1212" alt="image" src="https://github.com/user-attachments/assets/b07ac4b4-9cb3-4834-8fac-9f5f29709d78">
+<img width="1217" alt="Screenshot 2025-03-10 at 1 20 16 PM" src="https://github.com/user-attachments/assets/8aec926a-c6e8-4a7e-9b08-c7a67b19cc05" />
 
 ---
 
@@ -73,7 +73,7 @@ DeviceProcessEvents
 | project Timestamp, DeviceName, AccountName, ActionType, FileName, FolderPath, SHA256, ProcessCommandLine  
 | order by Timestamp desc
 ```
-<img width="1212" alt="image" src="https://github.com/user-attachments/assets/b13707ae-8c2d-4081-a381-2b521d3a0d8f">
+<img width="1223" alt="Screenshot 2025-03-10 at 1 22 22 PM" src="https://github.com/user-attachments/assets/cd8578ca-aca5-428b-9fb6-d31f8628cbe8" />
 
 ---
 
@@ -89,10 +89,10 @@ DeviceNetworkEvents
 | where InitiatingProcessAccountName != "system"  
 | where InitiatingProcessFileName in ("tor.exe", "firefox.exe")  
 | where RemotePort in ("9001", "9030", "9040", "9050", "9051", "9150", "80", "443")  
-| project Timestamp, DeviceName, InitiatingProcessAccountName, ActionType, RemoteIP, RemotePort, RemoteUrl, InitiatingProcessFileName, InitiatingProcessFolderPath  
+| project Timestamp, DeviceName, InitiatingProcessAccountName, ActionType, RemoteIP, RemotePort, InitiatingProcessFileName, InitiatingProcessFolderPath  
 | order by Timestamp desc
 ```
-<img width="1212" alt="image" src="https://github.com/user-attachments/assets/87a02b5b-7d12-4f53-9255-f5e750d0e3cb">
+<img width="1221" alt="Screenshot 2025-03-10 at 1 25 06 PM" src="https://github.com/user-attachments/assets/244a1f36-81ff-4cbd-8296-45643ccf7e79" />
 
 ---
 
